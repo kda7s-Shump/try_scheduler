@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './assets/css/index.css';
+import Header from './components/Header';
+import Side from './components/Side';
 import App from './components/App';
 import reportWebVitals from './components/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <div className="container">
+      <div className="row">
+        <Side />
+        <App />
+      </div>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

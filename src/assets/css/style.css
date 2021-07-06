@@ -1,0 +1,37 @@
+:root {
+  --main: #489393;
+  --back-color: #E3FFF0;
+  --border : #6D737A;
+}
+
+html {
+  font-size: 16px;
+}
+
+header {
+  height: 3rem;
+  background-color: var(--main);
+}
+
+#Side {
+  width: 23.61vw;
+  height: calc(100vh - 3rem);
+  background-color: var(--back-color);
+  border-right: 1px solid var(--border);
+}
+
+/* bootstrap */
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
