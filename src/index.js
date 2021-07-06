@@ -20,7 +20,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// アプリのパフォーマンスを測定したい場合は、結果を記録する関数
+// を渡して結果をログに記録したり（例：reportWebVitals(console.log))
+// とするか、アナリティクスのエンドポイントに送信します。
+// 詳細はこちら： https://bit.ly/CRA-vitals
 reportWebVitals();
