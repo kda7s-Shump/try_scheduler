@@ -1,14 +1,19 @@
 :root {
-  --main: #489393;
+  --main:       #489393;
   --back-color: #E3FFF0;
-  --border : #6D737A;
+  --border:     #6D737A;
+  --border-shadow: rgba(109, 115, 122, .125);
+
+  --white: #FCFEFF;
 }
 
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 header {
+  width: 100%;
   height: 3rem;
   background-color: var(--main);
 }
@@ -19,19 +24,44 @@ header {
   background-color: var(--back-color);
   border-right: 1px solid var(--border);
 }
+  @media screen and (min-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      position: fixed;
+      top: 0;
+    }
+    #Side {
+      display: none;
+    }
+}
 
 /* bootstrap */
 .container{
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  max-width: 100vw;
+}
+  @media screen and (mix-width: 768px) {
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      position: fixed;
+      top: 3rem;
+    }
 }
