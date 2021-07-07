@@ -120,10 +120,12 @@ export default class App extends React.PureComponent {
         title: 'チェックリスト',
         instances: checklists,
         allowMultiple: true,
-      }]
+      }],
+      url: "http://localhost:5000",
     };
 
     this.commitChanges = this.commitChanges.bind(this);
+    this.handleErrors  = this.handleErrors.bind(this);
   }
 
   commitChanges({ added, changed, deleted }) {
@@ -146,6 +148,14 @@ export default class App extends React.PureComponent {
       return { data };
     });
   }
+
+  handleErrors = response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    } else {
+      return response.json();
+    }
+  };
 
   render() {
     const { currentDate, data, locale, resources } = this.state;
@@ -171,7 +181,9 @@ export default class App extends React.PureComponent {
             cellDuration={240}
             dayScaleCellComponent={WeekDayScaleCell}
           />
-          <MonthView />
+          <MonthView
+            intervalCount={2}
+          />
 
           <Appointments />
           <Resources
